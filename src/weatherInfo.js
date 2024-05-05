@@ -41,7 +41,7 @@ const WeatherInfo = ({ weatherData }) => {
             }}
           />
           <Text style={styles.infoText}>{feels_like} °C</Text>
-          <Text style={styles.infoText}>Feels Like</Text>
+          <Text  style={styles.infoTextTitle}>Feels Like</Text>
         </View>
         <View style={styles.info}>
           <Image
@@ -51,7 +51,7 @@ const WeatherInfo = ({ weatherData }) => {
             }}
           />
           <Text style={styles.infoText}>{humidity} %</Text>
-          <Text style={styles.infoText}>Humidity</Text>
+          <Text  style={styles.infoTextTitle}>Humidity</Text>
         </View>
       </View>
       <View style={styles.extraInfo}>
@@ -63,7 +63,7 @@ const WeatherInfo = ({ weatherData }) => {
             }}
           />
           <Text style={styles.infoText}>{visibility} </Text>
-          <Text style={styles.infoText}>Visibility</Text>
+          <Text  style={styles.infoTextTitle}>Visibility</Text>
         </View>
         <View style={styles.info}>
           <Image
@@ -73,7 +73,29 @@ const WeatherInfo = ({ weatherData }) => {
             }}
           />
           <Text style={styles.infoText}>{speed} m/s</Text>
-          <Text style={styles.infoText}>Wind speed</Text>
+          <Text  style={styles.infoTextTitle}>Wind speed</Text>
+        </View>
+      </View>
+      <View style={styles.extraInfo}>
+        <View style={styles.info}>
+          <Image
+            style={styles.smallIcon}
+            source={{
+              uri: "https://p7.hiclipart.com/preview/455/525/244/sunrise-sunset-clip-art-sunset-cliparts-black.jpg",
+            }}
+          />
+          <Text style={styles.infoText}>{new Date(sunrise*1000).toLocaleString()} </Text>
+          <Text  style={styles.infoTextTitle}>Sunrise</Text>
+        </View>
+        <View style={styles.info}>
+          <Image
+            style={styles.smallIcon}
+            source={{
+              uri: "https://static.vecteezy.com/system/resources/thumbnails/008/096/406/small_2x/a-landscape-of-the-sunset-in-golden-color-and-its-reflection-on-the-surface-of-water-with-shadow-of-palm-trees-and-birds-free-vector.jpg",
+            }}
+          />
+          <Text style={styles.infoText}>{new Date(sunset*1000).toLocaleString()}</Text>
+          <Text style={styles.infoTextTitle}>Sunset</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -141,5 +163,10 @@ const styles = StyleSheet.create({
   infoText: {
     fontSize: 18,
     textAlign: "center",
+  },
+  infoTextTitle: {
+    fontSize: 20,
+    textAlign: "center",
+    fontWeight:"bold"
   },
 });
