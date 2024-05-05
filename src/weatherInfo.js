@@ -8,8 +8,9 @@ import {
   Dimensions,
 } from "react-native";
 import Constants from "expo-constants";
+import WeatherSearch from "./search";
 
-const WeatherInfo = ({ weatherData }) => {
+const WeatherInfo = ({ weatherData, fetchWeatherData }) => {
   const {
     name,
     visibility,
@@ -21,6 +22,7 @@ const WeatherInfo = ({ weatherData }) => {
 
   return (
     <SafeAreaView style={styles.container}>
+        <WeatherSearch fetchWeatherData={fetchWeatherData} />
       <View style={{ alignItems: "center" }}>
         <Text style={styles.title}>{name}</Text>
       </View>

@@ -42,7 +42,7 @@ const Weather = () => {
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Weather App</Text>
       </View>
-    <WeatherInfo weatherData={weatherData} />
+    <WeatherInfo weatherData={weatherData} fetchWeatherData={fetchWeatherData}/>
     </View>
   );
 };
