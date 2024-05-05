@@ -109,9 +109,10 @@ export default WeatherInfo;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FCF5DB",
-    paddingTop: Constants.statusBarHeight,
+    backgroundColor: "white",
+    paddingTop: 12,
     alignItems: "center",
+    border:"1px solid red"
   },
   title: {
     fontSize: 26,
@@ -147,7 +148,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     padding: 7,
-  },
+    flexWrap: "wrap",  
+    maxHeight: Dimensions.get("screen").height * 0.6, 
+  }, 
   info: {
     width: Dimensions.get("screen").width / 2.3,
     backgroundColor: "#D0EAFA",
